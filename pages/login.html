@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://tidle-ui.netlify.app/css/styles.css" />
+    <link rel="stylesheet" href="../css/_reset.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Login • gametroid</title>
+  </head>
+  <body class="fill-height">
+    <main class="fill-height grid place-items-center">
+      <section class="login-section">
+        <!-- Logo -->
+        <div class="text-center mb-4">
+          <a href="/" class="heading-1 text-gray text-decoration-none">
+            <span class="fas fa-gamepad text-primary"></span>
+            gametroid
+          </a>
+        </div>
+
+        <!-- Login Form -->
+        <div class="card outlined-card">
+          <div class="card-content">
+            <h3 class="heading-3">Login</h3>
+            <form class="flex flex-col my-4" action="">
+              <input
+                type="email"
+                id="email"
+                class="input mb-4"
+                placeholder="Email"
+              />
+              <input
+                type="password"
+                id="password"
+                class="input mb-2"
+                placeholder="password"
+              />
+              <div class="mb-4">
+                <input
+                  class="input"
+                  type="checkbox"
+                  name="remember-me"
+                  id="remember-me"
+                />
+                <label for="remember-me">Remember me</label>
+              </div>
+              <button class="btn">Login</button>
+              <a href="./register.html" class="btn link text-sm text-center">
+                Create an account <strong>&gt;</strong>
+              </a>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
