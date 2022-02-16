@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://tidle-ui.netlify.app/css/styles.css" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/products.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -17,20 +18,20 @@
     <header>
       <nav class="navbar flat">
         <h3 class="nav-title">
-          <a href="#">
-            <span class="fas fa-gamepad"></span>
+          <a href="/">
+            <span class="fas fa-gamepad text-primary"></span>
             gametroid
           </a>
         </h3>
         <ul class="nav-link-section">
-          <a href="" class="btn link">Login</a>
-          <a href="" class="btn fab small-fab btn-secondary">
+          <a href="./login.html" class="btn link">Login</a>
+          <a href="#" class="btn fab small-fab btn-secondary">
             <span class="badge">
               <span class="fas fa-heart fa-lg"></span>
               <span class="badge-content icon-number dnd">8</span>
             </span>
           </a>
-          <a href="" class="btn btn-secondary">
+          <a href="#" class="btn btn-secondary">
             Cart
             <span class="badge">
               <span class="fas fa-shopping-cart"></span>
@@ -42,8 +43,300 @@
     </header>
 
     <!-- Content -->
-    <main class="container">
+    <main class="shop-layout">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="flex justify-space-between">
+          <h4 class="heading-4">Filters</h4>
+          <button class="btn link">Clear</button>
+        </div>
+        <hr />
 
+        <!-- Price -->
+        <div class="my-4">
+          <h5 class="heading-5">Price</h5>
+          <div class="grid grid-cols-2">
+            <div>
+              <label for="min-price">Min</label>
+              <input class="input" type="number" id="min-price" min="0" max="50000" placeholder="0"/>
+            </div>
+            <div>
+              <label for="max-price">Max</label>
+              <input class="input" type="number" id="max-price" min="0" max="50000" placeholder="50000"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="my-4">
+          <h5 class="heading-5">Category</h5>
+          <ul class="sidebar-list">
+            <li>
+              <input class="input" type="checkbox" id="games" name="games" />
+              <label for="text-base"> Games </label>
+            </li>
+            <li>
+              <input
+                class="input"
+                type="checkbox"
+                id="consoles"
+                name="consoles"
+              />
+              <label for="text-base ml-2"> Consoles </label>
+            </li>
+            <li>
+              <input
+                class="input"
+                type="checkbox"
+                id="accessories"
+                name="accessories"
+              />
+              <label for="text-base ml-2"> Accessories </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sort By -->
+        <div class="my-4">
+          <h5 class="heading-5">Sort By</h5>
+          <ul class="sidebar-list">
+            <li>
+              <input class="input" type="radio" id="price-low" name="sortBy" />
+              <label for="text-base"> Price (Low to High) </label>
+            </li>
+            <li>
+              <input class="input" type="radio" id="price-high" name="sortBy" />
+              <label for="text-base ml-2"> Price (High to Low) </label>
+            </li>
+            <li>
+              <input class="input" type="radio" id="name-a" name="sortBy" />
+              <label for="text-base ml-2"> Name (A to Z) </label>
+            </li>
+            <li>
+              <input class="input" type="radio" id="name-z" name="sortBy" />
+              <label for="text-base ml-2"> Name (Z to A) </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img fit"
+            src="https://store-images.s-microsoft.com/image/apps.8135.66515090704019777.7fa547c1-c211-4229-a4d3-3ceef762e0a4.0bb0ac0a-9d63-4d91-8e53-f2e39a040bcd"
+            alt="gta5"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Grand Theft Auto V</div>
+            <div class="card-price flex-1">
+              <p>
+                <span class="price-before"> ₹ 2500 </span>
+                <span class="price-discount"> (-20%) </span>
+              </p>
+              <span class="price-now"> ₹ 1500 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://store-images.s-microsoft.com/image/apps.17382.13510798887677013.afcc99fc-bdcc-4b9c-8261-4b2cd93b8845.49beb011-7271-4f15-a78b-422c511871e4"
+            alt="minecraft"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Minecraft</div>
+            <div class="card-price flex-1">
+              <span class="price-now"> ₹ 1200 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://store-images.s-microsoft.com/image/apps.28990.69531514236615003.8f0d03d6-6311-4c21-a151-834503c2901a.d629260e-2bc4-4588-950c-f278cbc22a64"
+            alt="witcher 3"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">The Witcher 3: Wild Hunt</div>
+            <div class="card-price flex-1">
+              <p>
+                <span class="price-before"> ₹ 1000 </span>
+                <span class="price-discount"> (-25%) </span>
+              </p>
+              <span class="price-now"> ₹ 750 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="//store-images.s-microsoft.com/image/apps.58702.13536437121175354.18c8cdb9-4b5c-42e4-ae64-1c5d6063fc7e.54c3f469-3e75-4490-9eee-a6e6b8ceb998"
+            alt="fifa22"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Fifa 22</div>
+            <div class="card-price flex-1">
+              <span class="price-now"> ₹ 3999 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://compass-ssl.xbox.com/assets/f0/85/f085c120-d3d5-4424-8b70-eb25deaa326e.png?n=XBX_A-BuyBoxBGImage01-D.png"
+            alt="xbox series x"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Xbox Series X</div>
+            <div class="card-price flex-1">
+              <p>
+                <span class="price-before"> ₹ 44900 </span>
+                <span class="price-discount"> (-5%) </span>
+              </p>
+              <span class="price-now"> ₹ 42655 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://compass-ssl.xbox.com/assets/fc/b5/fcb5fbdf-009b-4a09-8850-e2825a84f89a.png?n=0202999-BuyBox03_Image-D.png"
+            alt="xbox series s"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Xbox Series S</div>
+            <div class="card-price flex-1">
+              <span class="price-now"> ₹ 34990 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://gmedia.playstation.com/is/image/SIEPDC/playstation-5-with-dualsense-front-product-shot-01-ps5-en-30jul20?$1600px--t$"
+            alt="ps5"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">PlayStation 5</div>
+            <div class="card-price flex-1">
+              <p>
+                <span class="price-before"> ₹ 45000 </span>
+                <span class="price-discount"> (-10%) </span>
+              </p>
+              <span class="price-now"> ₹ 41500 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://gmedia.playstation.com/is/image/SIEPDC/ps5-games-uncharted-collection-image-block-01-en-31jan22?$1600px$"
+            alt="uncharted legacy of thieves"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Uncharted: Legacy of Thieves Collection</div>
+            <div class="card-price flex-1">
+              <span class="price-now"> ₹ 4299 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm">
+          <img
+            class="card-img"
+            src="https://compass-ssl.xbox.com/assets/67/84/6784e5e5-49f8-4785-bf38-3bf5db0a5b29.jpg?n=Accessories-Hub_Content-Placement-0_300350_788x444.jpg"
+            alt="xbox-controller"
+          />
+          <div class="card-content flex-1">
+            <div class="card-title">Xbox Stereo Headset</div>
+            <div class="card-price flex-1">
+              <span class="price-now"> ₹ 5990 </span>
+            </div>
+            <div class="card-actions">
+              <button class="btn flex-1">
+                <span class="fas fa-shopping-cart"></span>
+                Add to Cart
+              </button>
+              <button class="btn outlined">
+                <span class="far fa-heart"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

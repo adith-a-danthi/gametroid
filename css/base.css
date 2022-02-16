@@ -1,3 +1,7 @@
+hr {
+  margin: 0.5rem 0;
+}
+
 .btn.fab {
   display: flex;
   justify-content: center;
@@ -29,7 +33,20 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.ecomm {
+  display: flex;
+  flex-direction: column;
+}
+
 .ecomm .card-img {
   height: 450px;
   max-height: 450px;
+}
+
+.ecomm .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  gap: 1rem;
 }
