@@ -24,20 +24,24 @@
           </a>
         </h3>
         <ul class="nav-link-section">
-          <a href="./login.html" class="btn link">Login</a>
-          <a href="#" class="btn fab small-fab btn-secondary">
-            <span class="badge">
-              <span class="fas fa-heart fa-lg"></span>
-              <span class="badge-content icon-number dnd">8</span>
-            </span>
-          </a>
-          <a href="#" class="btn btn-secondary">
-            Cart
-            <span class="badge">
-              <span class="fas fa-shopping-cart"></span>
-              <span class="badge-content icon-number">8</span>
-            </span>
-          </a>
+          <li><a href="./login.html" class="btn link">Login</a></li>
+          <li>
+            <a href="#" class="btn fab small-fab btn-secondary">
+              <span class="badge">
+                <span class="fas fa-heart fa-lg"></span>
+                <span class="badge-content icon-number dnd">8</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="btn btn-secondary">
+              Cart
+              <span class="badge">
+                <span class="fas fa-shopping-cart"></span>
+                <span class="badge-content icon-number">8</span>
+              </span>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -45,7 +49,7 @@
     <!-- Content -->
     <main class="shop-layout">
       <!-- Sidebar -->
-      <div class="sidebar">
+      <aside class="sidebar">
         <div class="flex justify-space-between">
           <h4 class="heading-4">Filters</h4>
           <button class="btn link">Clear</button>
@@ -58,11 +62,25 @@
           <div class="grid grid-cols-2">
             <div>
               <label for="min-price">Min</label>
-              <input class="input" type="number" id="min-price" min="0" max="50000" placeholder="0"/>
+              <input
+                class="input"
+                type="number"
+                id="min-price"
+                min="0"
+                max="50000"
+                placeholder="0"
+              />
             </div>
             <div>
               <label for="max-price">Max</label>
-              <input class="input" type="number" id="max-price" min="0" max="50000" placeholder="50000"/>
+              <input
+                class="input"
+                type="number"
+                id="max-price"
+                min="0"
+                max="50000"
+                placeholder="50000"
+              />
             </div>
           </div>
         </div>
@@ -73,7 +91,7 @@
           <ul class="sidebar-list">
             <li>
               <input class="input" type="checkbox" id="games" name="games" />
-              <label for="text-base"> Games </label>
+              <label class="text-base ml-2" for="games"> Games </label>
             </li>
             <li>
               <input
@@ -82,7 +100,7 @@
                 id="consoles"
                 name="consoles"
               />
-              <label for="text-base ml-2"> Consoles </label>
+              <label class="text-base ml-2" for="consoles"> Consoles </label>
             </li>
             <li>
               <input
@@ -91,7 +109,9 @@
                 id="accessories"
                 name="accessories"
               />
-              <label for="text-base ml-2"> Accessories </label>
+              <label class="text-base ml-2" for="accessories">
+                Accessories
+              </label>
             </li>
           </ul>
         </div>
@@ -102,23 +122,31 @@
           <ul class="sidebar-list">
             <li>
               <input class="input" type="radio" id="price-low" name="sortBy" />
-              <label for="text-base"> Price (Low to High) </label>
+              <label class="text-base ml-2" for="price-low">
+                Price (Low to High)
+              </label>
             </li>
             <li>
               <input class="input" type="radio" id="price-high" name="sortBy" />
-              <label for="text-base ml-2"> Price (High to Low) </label>
+              <label class="text-base ml-2" for="price-high">
+                Price (High to Low)
+              </label>
             </li>
             <li>
-              <input class="input" type="radio" id="name-a" name="sortBy" />
-              <label for="text-base ml-2"> Name (A to Z) </label>
+              <input class="input" type="radio" id="name-a-z" name="sortBy" />
+              <label class="text-base ml-2" for="name-a-z">
+                Name (A to Z)
+              </label>
             </li>
             <li>
-              <input class="input" type="radio" id="name-z" name="sortBy" />
-              <label for="text-base ml-2"> Name (Z to A) </label>
+              <input class="input" type="radio" id="name-z-a" name="sortBy" />
+              <label class="text-base ml-2" for="name-z-a">
+                Name (Z to A)
+              </label>
             </li>
           </ul>
         </div>
-      </div>
+      </aside>
 
       <!-- Products Grid -->
       <div class="products-grid">
@@ -299,7 +327,9 @@
             alt="uncharted legacy of thieves"
           />
           <div class="card-content flex-1">
-            <div class="card-title">Uncharted: Legacy of Thieves Collection</div>
+            <div class="card-title">
+              Uncharted: Legacy of Thieves Collection
+            </div>
             <div class="card-price flex-1">
               <span class="price-now"> ₹ 4299 </span>
             </div>

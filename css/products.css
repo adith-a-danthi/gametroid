@@ -1,7 +1,7 @@
 .shop-layout {
   display: grid;
   grid-template-areas: "sidebar main-content";
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 18.75rem 1fr;
 }
 
 .sidebar {
@@ -15,7 +15,7 @@
   background-color: var(--color-secondary);
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 18.75rem);
   place-content: center;
   gap: 1.5rem;
 }
@@ -24,4 +24,11 @@
   list-style: none;
   padding: 0;
   margin: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .shop-layout {
+    grid-template-areas: "sidebar" "main-content";
+    grid-template-columns: 1fr;
+  }
 }
