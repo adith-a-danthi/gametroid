@@ -1,3 +1,11 @@
+:root {
+  --color-dark-tint: rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
 .btn.fab {
   display: flex;
   justify-content: center;
@@ -26,10 +34,23 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--color-dark-tint);
+}
+
+.ecomm {
+  display: flex;
+  flex-direction: column;
 }
 
 .ecomm .card-img {
-  height: 450px;
-  max-height: 450px;
+  height: 25rem;
+  max-height: 25rem;
+}
+
+.ecomm .card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  gap: 1rem;
 }
