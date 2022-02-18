@@ -1,0 +1,16 @@
+body {
+  background-color: var(--color-secondary);
+}
+
+.wishlist-layout {
+  max-width: 65rem;
+  margin: 1rem auto;
+}
+
+.wishlist-items {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 18.75rem);
+  place-content: center;
+  gap: 1.5rem;
+}
