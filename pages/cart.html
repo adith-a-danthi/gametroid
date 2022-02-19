@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://tidle-ui.netlify.app/css/styles.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Cart • gametroid</title>
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header>
+      <nav class="navbar flat">
+        <h3 class="nav-title">
+          <a href="/">
+            <span class="fas fa-gamepad text-primary"></span>
+            gametroid
+          </a>
+        </h3>
+        <ul class="nav-link-section">
+          <li><a href="./login.html" class="btn link">Login</a></li>
+          <li>
+            <a
+              href="/pages/wishlist.html"
+              class="btn fab small-fab btn-secondary"
+            >
+              <span class="badge">
+                <span class="fas fa-heart fa-lg"></span>
+                <span class="badge-content icon-number dnd">8</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/pages/cart.html" class="btn link">
+              Cart
+              <span class="badge">
+                <span class="fas fa-shopping-cart"></span>
+                <span class="badge-content icon-number">8</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <main class="cart-layout">
+      <h3 class="heading-3">My Cart</h3>
+
+      <!-- Cart Items -->
+      <div class="cart-items">
+        <div class="card outlined-card ecomm ecomm-landscape">
+          <img
+            class="card-img"
+            src="https://store-images.s-microsoft.com/image/apps.58702.13536437121175354.18c8cdb9-4b5c-42e4-ae64-1c5d6063fc7e.54c3f469-3e75-4490-9eee-a6e6b8ceb998"
+            alt="fifa22"
+          />
+          <div class="card-content flex-1">
+            <div class="heading-4">Fifa 22</div>
+            <div class="card-price flex-1">
+              <span class="price-now"> ₹ 3999 </span>
+            </div>
+            <div class="flex gap-2 align-items-center my-4">
+              <strong class="text-base">Quantity: </strong>
+              <button class="btn fab small-fab">
+                <span class="fas fa-minus"></span>
+              </button>
+              <input
+                type="number"
+                name="quantity"
+                class="input"
+                min="1"
+                placeholder="1"
+                value="1"
+              />
+              <button class="btn fab small-fab">
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 fluid-grid">
+              <button class="btn outlined my-2">Remove from cart</button>
+              <button class="btn outlined my-2">Move to Wishlist</button>
+            </div>
+          </div>
+        </div>
+        <div class="card outlined-card ecomm ecomm-landscape">
+          <img
+            class="card-img"
+            src="https://compass-ssl.xbox.com/assets/f0/85/f085c120-d3d5-4424-8b70-eb25deaa326e.png?n=XBX_A-BuyBoxBGImage01-D.png"
+            alt="fifa22"
+          />
+          <div class="card-content flex-1">
+            <div class="heading-4">Xbox Series X</div>
+            <div class="card-price flex-1">
+              <p>
+                <span class="price-before"> ₹ 44900 </span>
+                <span class="price-discount"> (-5%) </span>
+              </p>
+              <span class="price-now"> ₹ 42655 </span>
+            </div>
+            <div class="flex gap-2 align-items-center my-4">
+              <strong class="text-base">Quantity: </strong>
+              <button class="btn fab small-fab">
+                <span class="fas fa-minus"></span>
+              </button>
+              <input
+                type="number"
+                name="quantity"
+                class="input"
+                min="1"
+                placeholder="1"
+                value="1"
+              />
+              <button class="btn fab small-fab">
+                <span class="fas fa-plus"></span>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 fluid-grid">
+              <button class="btn outlined my-2">Remove from cart</button>
+              <button class="btn outlined my-2">Move to Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Summary -->
+      <div class="cart-summary">
+        <div class="card outlined-card card-content">
+          <h4 class="heading-4">Price Details</h4>
+          <hr />
+          <!-- Price -->
+          <div class="flex justify-space-between">
+            <p><strong> Price (2 items) </strong></p>
+            <p>
+              <span>₹</span>
+              48899
+            </p>
+          </div>
+          <!-- Discount -->
+          <div class="flex justify-space-between">
+            <p><strong> Discount </strong></p>
+            <p>
+              <span>- ₹</span>
+              2245
+            </p>
+          </div>
+          <!-- Delivery Charges -->
+          <div class="flex justify-space-between">
+            <p><strong> Delivery charges </strong></p>
+            <p>
+              <span>₹</span>
+              0
+            </p>
+          </div>
+          <hr />
+          <!-- Total -->
+          <div class="flex justify-space-between font-weight-bold">
+            <p><strong> TOTAL AMOUNT </strong></p>
+            <p>
+              <span>₹</span>
+              46654
+            </p>
+          </div>
+          <hr />
+          <button class="btn my-4 font-weight-bold">Place Order</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
